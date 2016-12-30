@@ -283,7 +283,7 @@ public class ConnectionProperties {
     // ANALYTICS
     //-------------------------------------
     public String getUsageStatisticsByTeamId(String id, String...date) {
-        return HTTP_MODE + sioAddress + ":" + sioPort + "/" +analEndpoint + "/teams/" + id + "/usage";
+        return HTTP_MODE + sioAddress + ":" + sioPort + "/" +analEndpoint + "/usage" + "/teams/" + id ;
     }
 
 }
