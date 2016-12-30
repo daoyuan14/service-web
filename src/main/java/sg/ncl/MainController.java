@@ -49,7 +49,7 @@ import static sg.ncl.domain.ExceptionState.*;
  * Spring Controller
  * Direct the views to appropriate locations and invoke the respective REST API
  *
- * @author Cassie, Desmond, Te Ye, Vu
+ * @author: Cassie, Desmond, Te Ye, Vu
  */
 @Controller
 @Slf4j

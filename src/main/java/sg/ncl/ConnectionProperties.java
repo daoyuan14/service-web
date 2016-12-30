@@ -29,7 +29,7 @@ public class ConnectionProperties {
     private String approveJoinRequest;
     private String realEndpoint;
     private String imageEndpoint;
-
+    private String analEndpoint;
     // service-telemetry
     private String telemetryAddress;
     private String telemetryPort;
@@ -253,9 +253,9 @@ public class ConnectionProperties {
     //-------------------------------------
     // USAGE STATISTICS
     //-------------------------------------
-    public String getUsageStatisticsByTeamId(String id) {
-        return HTTP_MODE + sioAddress + ":" + sioPort + "/" +realEndpoint + "/teams/" + id + "/usage";
-    }
+   // public String getUsageStatisticsByTeamId(String id) {
+   //     return HTTP_MODE + sioAddress + ":" + sioPort + "/" +realEndpoint + "/teams/" + id + "/usage";
+   // }
 
     //-------------------------------------
     // PASSWORD RESET
@@ -278,4 +278,12 @@ public class ConnectionProperties {
     public String sendUploadChunk(String dataId, Integer chunkNumber) {
         return HTTP_MODE + sioAddress + ":" + sioPort + "/" + dataEndpoint + "/" + dataId + "/chunks/" + chunkNumber;
     }
+
+    //-------------------------------------
+    // ANALYTICS
+    //-------------------------------------
+    public String getUsageStatisticsByTeamId(String id, String...date) {
+        return HTTP_MODE + sioAddress + ":" + sioPort + "/" +analEndpoint + "/teams/" + id + "/usage";
+    }
+
 }
